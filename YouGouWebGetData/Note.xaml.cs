@@ -17,22 +17,15 @@ using System.Windows.Shapes;
 namespace YouGouWebGetData
 {
     /// <summary>
-    /// MainWindow.xaml 的交互逻辑
+    /// Note.xaml 的交互逻辑
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Note : UserControl
     {
-        public MainWindow()
+        public Note()
         {
             InitializeComponent();
         }
-        private void Sample2_DialogHost_OnDialogClosing(object sender, DialogClosingEventArgs eventArgs)
-        {
-            Console.WriteLine("SAMPLE 2: Closing dialog with parameter: " + (eventArgs.Parameter ?? ""));
-        }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            Biz.MessageTips("请确认", sender, e);
-        }
     }
+
 }

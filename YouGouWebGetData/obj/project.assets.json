@@ -52,6 +52,22 @@
           "lib/net45/_._": {}
         }
       },
+      "ShowMeTheXAML/2.0.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "PresentationCore",
+          "PresentationFramework",
+          "System.Xaml",
+          "System.Xml.Linq",
+          "WindowsBase"
+        ],
+        "compile": {
+          "lib/net472/ShowMeTheXAML.dll": {}
+        },
+        "runtime": {
+          "lib/net472/ShowMeTheXAML.dll": {}
+        }
+      },
       "System.Data.DataSetExtensions/4.6.0-preview3.19128.7": {
         "type": "package",
         "frameworkAssemblies": [
@@ -114,6 +130,22 @@
         },
         "runtime": {
           "lib/net45/_._": {}
+        }
+      },
+      "ShowMeTheXAML/2.0.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "PresentationCore",
+          "PresentationFramework",
+          "System.Xaml",
+          "System.Xml.Linq",
+          "WindowsBase"
+        ],
+        "compile": {
+          "lib/net472/ShowMeTheXAML.dll": {}
+        },
+        "runtime": {
+          "lib/net472/ShowMeTheXAML.dll": {}
         }
       },
       "System.Data.DataSetExtensions/4.6.0-preview3.19128.7": {
@@ -180,6 +212,22 @@
           "lib/net45/_._": {}
         }
       },
+      "ShowMeTheXAML/2.0.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "PresentationCore",
+          "PresentationFramework",
+          "System.Xaml",
+          "System.Xml.Linq",
+          "WindowsBase"
+        ],
+        "compile": {
+          "lib/net472/ShowMeTheXAML.dll": {}
+        },
+        "runtime": {
+          "lib/net472/ShowMeTheXAML.dll": {}
+        }
+      },
       "System.Data.DataSetExtensions/4.6.0-preview3.19128.7": {
         "type": "package",
         "frameworkAssemblies": [
@@ -242,6 +290,22 @@
         },
         "runtime": {
           "lib/net45/_._": {}
+        }
+      },
+      "ShowMeTheXAML/2.0.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "PresentationCore",
+          "PresentationFramework",
+          "System.Xaml",
+          "System.Xml.Linq",
+          "WindowsBase"
+        ],
+        "compile": {
+          "lib/net472/ShowMeTheXAML.dll": {}
+        },
+        "runtime": {
+          "lib/net472/ShowMeTheXAML.dll": {}
         }
       },
       "System.Data.DataSetExtensions/4.6.0-preview3.19128.7": {
@@ -396,6 +460,26 @@
         "version.txt"
       ]
     },
+    "ShowMeTheXAML/2.0.0": {
+      "sha512": "ljDrkSyGhx3EKIq73c9317m7NsvTjCKVdO0vnqzjwdWAgFkpdfrEd3Nn6uF/Mc+QUTSUfFfjmONJDfYSPwCB3g==",
+      "type": "package",
+      "path": "showmethexaml/2.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/monoandroid10.0/ShowMeTheXAML.dll",
+        "lib/monoandroid90/ShowMeTheXAML.dll",
+        "lib/net472/ShowMeTheXAML.dll",
+        "lib/netcoreapp3.1/ShowMeTheXAML.dll",
+        "lib/netstandard2.0/ShowMeTheXAML.dll",
+        "lib/uap10.0.17763/ShowMeTheXAML.dll",
+        "lib/uap10.0.17763/ShowMeTheXAML.pri",
+        "lib/xamarinios10/ShowMeTheXAML.dll",
+        "lib/xamarinmac20/ShowMeTheXAML.dll",
+        "showmethexaml.2.0.0.nupkg.sha512",
+        "showmethexaml.nuspec"
+      ]
+    },
     "System.Data.DataSetExtensions/4.6.0-preview3.19128.7": {
       "sha512": "ZFJYYi41Wf4xlFKuuRUblw8yThgzBTYeZTs7eGU7sDiu+X+BmeIdT3pstCrmLpDyflDIBuKX1VYmBCGKo14h6w==",
       "type": "package",
@@ -420,7 +504,8 @@
   "projectFileDependencyGroups": {
     ".NETFramework,Version=v4.7.2": [
       "MaterialDesignThemes >= 3.2.0",
-      "MaterialDesignThemes.Wpf >= 1.0.1"
+      "MaterialDesignThemes.Wpf >= 1.0.1",
+      "ShowMeTheXAML >= 2.0.0"
     ]
   },
   "packageFolders": {
@@ -463,6 +548,10 @@
           "MaterialDesignThemes.Wpf": {
             "target": "Package",
             "version": "[1.0.1, )"
+          },
+          "ShowMeTheXAML": {
+            "target": "Package",
+            "version": "[2.0.0, )"
           }
         }
       }

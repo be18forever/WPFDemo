@@ -40,3 +40,6 @@ E:\1-MyGitProject\WPFDemo\YouGouWebGetData\obj\Debug\YouGouWebGetData.csproj.Cor
 E:\1-MyGitProject\WPFDemo\YouGouWebGetData\obj\Debug\YouGouWebGetData.csproj.CopyComplete
 E:\1-MyGitProject\WPFDemo\YouGouWebGetData\obj\Debug\YouGouWebGetData.exe
 E:\1-MyGitProject\WPFDemo\YouGouWebGetData\obj\Debug\YouGouWebGetData.pdb
+E:\1-MyGitProject\WPFDemo\YouGouWebGetData\obj\Debug\Note.baml
+E:\1-MyGitProject\WPFDemo\YouGouWebGetData\obj\Debug\Note.g.cs
+E:\1-MyGitProject\WPFDemo\YouGouWebGetData\bin\Debug\ShowMeTheXAML.dll

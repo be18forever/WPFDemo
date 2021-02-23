@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:YouGouWebGetData"
+        xmlns:local="clr-namespace:YouGouWebGetData"         
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
@@ -15,20 +15,75 @@
         Background="{DynamicResource MaterialDesignPaper}"
         FontFamily="{DynamicResource MaterialDesignFont}"
         >
-    <Grid>
-        <StackPanel>
-            <materialDesign:Card Padding="32" Margin="16">
-                <TextBlock Style="{DynamicResource MaterialDesignHeadline6TextBlock}">My First Material Design 11App</TextBlock>
-            </materialDesign:Card>
-        </StackPanel>
-        <materialDesign:PackIcon
-                Grid.Row="1"
-                Grid.Column="2"
-                Kind="Key"
-                Foreground="{Binding ElementName=PasswordBox, Path=BorderBrush}"
-                HorizontalAlignment="Right"/>
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <!--<ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Button.xaml" />-->
+                <!--<ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.DialogHost.xaml" />-->
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.PopupBox.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Grid VerticalAlignment="Stretch" Margin="16">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <materialDesign:PackIcon Kind="Account" VerticalAlignment="Center"/>
+        <TextBlock Grid.Column="1" Margin="8 0 0 0" VerticalAlignment="Center" >Name:</TextBlock>
+        <TextBox Grid.Column="2" Margin="8 0 0 0" VerticalAlignment="Center" ></TextBox>
+      
+        <materialDesign:PopupBox Grid.Column="3" Margin="8 0 0 0" Style="{StaticResource MaterialDesignMultiFloatingActionDarkPopupBox}">
+            <StackPanel>
+                <Button>1</Button>
+                <Button>2</Button>
+            </StackPanel>
+        </materialDesign:PopupBox>
+        <!--<Button Grid.Column="3" Margin="8 0 0 0">Submit</Button>-->
+        <Button  Grid.Column="4" Margin="8 0 0 0" Command="{x:Static materialDesign:DialogHost.OpenDialogCommand}"
+                                materialDesign:DialogHost.DialogClosingAttached="Sample2_DialogHost_OnDialogClosing"
+                                Width="128" >
+            <Button.CommandParameter>
+                <StackPanel Margin="16">
+                    <ProgressBar Style="{DynamicResource MaterialDesignCircularProgressBar}" HorizontalAlignment="Center" Margin="16" IsIndeterminate="True" Value="0" />
+                    <Button Style="{StaticResource MaterialDesignFlatButton}" IsCancel="True" 
+                                            Command="{x:Static materialDesign:DialogHost.CloseDialogCommand}"
+                                            CommandParameter="Sample2Cancel"
+                                            HorizontalAlignment="Center">CANCEL</Button>
+                </StackPanel>
+            </Button.CommandParameter>
+            PASS VIEW
+        </Button>
+        <materialDesign:Card Grid.Row="1" Grid.ColumnSpan="4" materialDesign:ShadowAssist.ShadowDepth="Depth3" Margin="20">
+            <StackPanel Orientation="Horizontal" Margin="16">
+                <materialDesign:PackIcon Kind="Twitter" Height="35" Width="35"/>
+                <TextBlock Margin="16 16 0 0" TextWrapping="Wrap" >Hey</TextBlock>
 
-
+            </StackPanel>
+        </materialDesign:Card>
+        <materialDesign:ColorZone Grid.Row="2" Height="200" Mode="PrimaryLight" CornerRadius="20">
+            <StackPanel Orientation="Horizontal" Margin="16">
+                <materialDesign:PackIcon Kind="Twitter" Height="20"/>
+                <TextBlock Margin="16 16 0 0" TextWrapping="Wrap">Please Follow me on twiter</TextBlock>
+                <materialDesign:ColorZone>
+                    <StackPanel Orientation="Horizontal" Margin="16">
+                        <materialDesign:PackIcon Kind="Magnify"/>
+                        <TextBox Margin="8 0 0 0" materialDesign:TextFieldAssist.TextBoxViewMargin="1" MinWidth="50"></TextBox>
+                        <Button Margin="8 0 0 0">
+                            <materialDesign:PackIcon Kind="Microphone"/>
+                        </Button>
+                    </StackPanel>
+                </materialDesign:ColorZone>
+            </StackPanel>
+        </materialDesign:ColorZone>
     </Grid>
     
 </Window>

@@ -1,21 +1,21 @@
 {
   "format": 1,
   "restore": {
-    "D:\\MyProject\\YouGouWebGetData\\YouGouWebGetData\\YouGouWebGetData.csproj": {}
+    "E:\\1-MyGitProject\\WPFDemo\\YouGouWebGetData\\YouGouWebGetData.csproj": {}
   },
   "projects": {
-    "D:\\MyProject\\YouGouWebGetData\\YouGouWebGetData\\YouGouWebGetData.csproj": {
+    "E:\\1-MyGitProject\\WPFDemo\\YouGouWebGetData\\YouGouWebGetData.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\MyProject\\YouGouWebGetData\\YouGouWebGetData\\YouGouWebGetData.csproj",
+        "projectUniqueName": "E:\\1-MyGitProject\\WPFDemo\\YouGouWebGetData\\YouGouWebGetData.csproj",
         "projectName": "YouGouWebGetData",
-        "projectPath": "D:\\MyProject\\YouGouWebGetData\\YouGouWebGetData\\YouGouWebGetData.csproj",
-        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "D:\\MyProject\\YouGouWebGetData\\YouGouWebGetData\\obj\\",
+        "projectPath": "E:\\1-MyGitProject\\WPFDemo\\YouGouWebGetData\\YouGouWebGetData.csproj",
+        "packagesPath": "C:\\Users\\XiaoXu\\.nuget\\packages\\",
+        "outputPath": "E:\\1-MyGitProject\\WPFDemo\\YouGouWebGetData\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "configFilePaths": [
-          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\XiaoXu\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -23,7 +23,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "http://10.0.0.201:8000/nuget": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {

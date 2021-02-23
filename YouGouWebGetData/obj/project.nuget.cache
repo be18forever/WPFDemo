@@ -1,0 +1,28 @@
+{
+  "version": 2,
+  "dgSpecHash": "dqnOyDqX9JwlxlRZgbB4Spo5OudgygiVJ9zG6r9OVfaMCOmTSipmbuMU6p0m2Q7rgkOkef5k93MVkGKLg54jPw==",
+  "success": true,
+  "projectFilePath": "D:\\MyProject\\YouGouWebGetData\\YouGouWebGetData\\YouGouWebGetData.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Administrator\\.nuget\\packages\\materialdesigncolors\\1.2.7\\materialdesigncolors.1.2.7.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\materialdesignthemes\\3.2.0\\materialdesignthemes.3.2.0.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\materialdesignthemes.wpf\\1.0.1\\materialdesignthemes.wpf.1.0.1.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.csharp\\4.6.0\\microsoft.csharp.4.6.0.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\system.data.datasetextensions\\4.6.0-preview3.19128.7\\system.data.datasetextensions.4.6.0-preview3.19128.7.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1603",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "MaterialDesignThemes.Wpf 1.0.1 依赖于 MaterialDesignColors (>= 1.0.1)，但找不到 MaterialDesignColors 1.0.1。 已解决 MaterialDesignColors 1.1.0 的近似最佳匹配。 ",
+      "libraryId": "MaterialDesignColors",
+      "targetGraphs": [
+        ".NETFramework,Version=v4.7.2",
+        ".NETFramework,Version=v4.7.2/win",
+        ".NETFramework,Version=v4.7.2/win-x64",
+        ".NETFramework,Version=v4.7.2/win-x86"
+      ]
+    }
+  ]
+}

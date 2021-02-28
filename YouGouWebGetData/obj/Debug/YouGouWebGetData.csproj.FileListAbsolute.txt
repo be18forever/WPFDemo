@@ -26,7 +26,6 @@ E:\1-MyGitProject\WPFDemo\YouGouWebGetData\bin\Debug\MaterialDesignColors.dll
 E:\1-MyGitProject\WPFDemo\YouGouWebGetData\bin\Debug\MaterialDesignColors.pdb
 E:\1-MyGitProject\WPFDemo\YouGouWebGetData\bin\Debug\MaterialDesignThemes.Wpf.dll
 E:\1-MyGitProject\WPFDemo\YouGouWebGetData\bin\Debug\MaterialDesignThemes.Wpf.pdb
-E:\1-MyGitProject\WPFDemo\YouGouWebGetData\obj\Debug\YouGouWebGetData.csprojAssemblyReference.cache
 E:\1-MyGitProject\WPFDemo\YouGouWebGetData\obj\Debug\App.baml
 E:\1-MyGitProject\WPFDemo\YouGouWebGetData\obj\Debug\MainWindow.g.cs
 E:\1-MyGitProject\WPFDemo\YouGouWebGetData\obj\Debug\App.g.cs
@@ -43,3 +42,7 @@ E:\1-MyGitProject\WPFDemo\YouGouWebGetData\obj\Debug\YouGouWebGetData.pdb
 E:\1-MyGitProject\WPFDemo\YouGouWebGetData\obj\Debug\Note.baml
 E:\1-MyGitProject\WPFDemo\YouGouWebGetData\obj\Debug\Note.g.cs
 E:\1-MyGitProject\WPFDemo\YouGouWebGetData\bin\Debug\ShowMeTheXAML.dll
+E:\1-MyGitProject\WPFDemo\YouGouWebGetData\obj\Debug\Assets\Styles\DefaultStyle.baml
+E:\1-MyGitProject\WPFDemo\YouGouWebGetData\bin\Debug\WebDriver.Support.dll
+E:\1-MyGitProject\WPFDemo\YouGouWebGetData\bin\Debug\WebDriver.dll
+E:\1-MyGitProject\WPFDemo\YouGouWebGetData\obj\Debug\YouGouWebGetData.csprojAssemblyReference.cache

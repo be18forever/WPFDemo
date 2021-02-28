@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "MR+Qh/jSrbdflChYqCcGC61zgdN/paoJQsb6+r73MLEnAiJBuMgU4qD8vK/8AgPUrFn+e530ISZlssOd/sgpYw==",
+  "dgSpecHash": "BCHsCoHMl0Q4HPI6OaosyR0iN1b94UpDmrgWHEVKdhEdWLQKmChXneXLw33P7H1ixdAHCrhti0+F2VrKk+mv4w==",
   "success": true,
   "projectFilePath": "E:\\1-MyGitProject\\WPFDemo\\YouGouWebGetData\\YouGouWebGetData.csproj",
   "expectedPackageFiles": [
@@ -8,6 +8,9 @@
     "C:\\Users\\XiaoXu\\.nuget\\packages\\materialdesignthemes\\3.2.0\\materialdesignthemes.3.2.0.nupkg.sha512",
     "C:\\Users\\XiaoXu\\.nuget\\packages\\materialdesignthemes.wpf\\1.0.1\\materialdesignthemes.wpf.1.0.1.nupkg.sha512",
     "C:\\Users\\XiaoXu\\.nuget\\packages\\microsoft.csharp\\4.6.0\\microsoft.csharp.4.6.0.nupkg.sha512",
+    "C:\\Users\\XiaoXu\\.nuget\\packages\\selenium.chrome.webdriver\\85.0.0\\selenium.chrome.webdriver.85.0.0.nupkg.sha512",
+    "C:\\Users\\XiaoXu\\.nuget\\packages\\selenium.support\\3.141.0\\selenium.support.3.141.0.nupkg.sha512",
+    "C:\\Users\\XiaoXu\\.nuget\\packages\\selenium.webdriver\\3.141.0\\selenium.webdriver.3.141.0.nupkg.sha512",
     "C:\\Users\\XiaoXu\\.nuget\\packages\\showmethexaml\\2.0.0\\showmethexaml.2.0.0.nupkg.sha512",
     "C:\\Users\\XiaoXu\\.nuget\\packages\\system.data.datasetextensions\\4.6.0-preview3.19128.7\\system.data.datasetextensions.4.6.0-preview3.19128.7.nupkg.sha512"
   ],

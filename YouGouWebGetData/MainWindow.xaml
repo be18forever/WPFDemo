@@ -5,20 +5,20 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:YouGouWebGetData"         
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800"
+        Title="MainWindow" Height="450" Width="500"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" xmlns:system="clr-namespace:System;assembly=mscorlib"
         TextElement.Foreground="{DynamicResource MaterialDesignBody}"
         TextElement.FontWeight="Regular"
         TextElement.FontSize="13"
         TextOptions.TextFormattingMode="Ideal" 
-        TextOptions.TextRenderingMode="Auto"        
-        Background="{DynamicResource MaterialDesignPaper}"
+        Name="window"
+        TextOptions.TextRenderingMode="Auto"                
         FontFamily="{DynamicResource MaterialDesignFont}"
-        >
-    
+        WindowStyle="None" AllowsTransparency="True" Background="{x:Null}"  WindowStartupLocation="CenterScreen" >
     <Window.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Assets/Styles/DefaultStyle.xaml"/>
                 <!--<ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Button.xaml" />-->
                 <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.DialogHost.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.PopupBox.xaml"/>
@@ -33,7 +33,114 @@
             </DataTemplate>
         </ResourceDictionary>
     </Window.Resources>
-    <Grid VerticalAlignment="Stretch" Margin="16">
+    <Border Margin="5" Background="White" CornerRadius="10">
+        <Border.Effect>
+            <DropShadowEffect Color="Gray" ShadowDepth="0" BlurRadius="5" Opacity="0.3" Direction="0"/>
+        </Border.Effect>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="3*"/>
+            </Grid.RowDefinitions>
+            <Border Background="#007dfa" CornerRadius="10 10 0 0" MouseLeftButtonDown="WinMove_LeftButtonDown"/>
+            <Button VerticalAlignment="Top" CommandParameter="{Binding ElementName=window  }" Command="{Binding CloseWindowCommand}" Height="40" Width="40" Foreground="White" HorizontalAlignment="Right" Content="&#xe600;" FontFamily="/Assets/Fonts/#iconfont" Template="{StaticResource WindowControlButtonTemplate}"/>
+            <StackPanel Grid.Row="2" >
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <ProgressBar Name="ShowProgress"  IsIndeterminate="true" Visibility="Hidden" />
+                </Grid>
+                <!--用户名-->
+                <Grid Margin="0 30 10 0" FocusManager.FocusedElement="{Binding ElementName=txtUserName}">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="50"/>
+                        <ColumnDefinition Width="1*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Background="White" HorizontalAlignment="Center" VerticalAlignment="Center">
+                      <materialDesign:PackIcon Kind="Account" />
+                    </TextBlock>
+                    <TextBox Grid.Column="2" Name="txtUserName"
+                    Style="{StaticResource MaterialDesignOutlinedTextFieldTextBox}"
+                    VerticalAlignment="Top"
+                    Height="40"
+                    AcceptsReturn="True"
+                    TextWrapping="Wrap"
+                    Text="{Binding LoginModel.UserName,UpdateSourceTrigger=PropertyChanged}"
+                    VerticalScrollBarVisibility="Auto"
+                    materialDesign:HintAssist.Hint="UserName"
+                    IsEnabled="True" >
+                        <TextBox.InputBindings>
+                            <KeyBinding Key="Enter" Command="{Binding LoginCommand}"
+                                        CommandParameter="{Binding ElementName=window}"/>
+                        </TextBox.InputBindings>
+                    </TextBox>
+                </Grid>
+                <!--密码-->
+                <Grid Margin="0 20 10 0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="50"/>
+                        <ColumnDefinition Width="1*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock  Background="White" HorizontalAlignment="Center" VerticalAlignment="Center">
+                      <materialDesign:PackIcon Kind="Lock" />
+                    </TextBlock>
+                    <TextBox Grid.Column="2"
+                    Style="{StaticResource MaterialDesignOutlinedTextFieldTextBox}"
+                    VerticalAlignment="Top"
+                    Height="40"
+                    AcceptsReturn="True"
+                    TextWrapping="Wrap"
+                    VerticalScrollBarVisibility="Auto"
+                    materialDesign:HintAssist.Hint="Password"
+                     Text="{Binding LoginModel.Password ,UpdateSourceTrigger=PropertyChanged}"
+                    IsEnabled="True" >
+                        <TextBox.InputBindings>
+                            <KeyBinding Key="Enter" Command="{Binding LoginCommand}"
+                                        CommandParameter="{Binding ElementName=window}"/>
+                        </TextBox.InputBindings>
+                    </TextBox>
+                </Grid>
+                <!--国家选择-->
+                <Grid Margin="0 20 10 0" >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="50"/>
+                        <ColumnDefinition Width="1*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock  Background="White" HorizontalAlignment="Center" VerticalAlignment="Center">
+                      <materialDesign:PackIcon Kind="City" />
+                    </TextBlock>
+                    <StackPanel  Grid.Column="2">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                            </Grid.ColumnDefinitions>
+                        </Grid>
+                        <ComboBox 
+                            Style="{StaticResource MaterialDesignFilledComboBox}"
+                            x:Name="FilledComboBox"
+                            IsEnabled="true"
+                            materialDesign:HintAssist.Hint="国家选择" SelectedValue="{Binding LoginModel.Country}">
+                        </ComboBox>
+                    </StackPanel>
+                </Grid>
+                <!--登录按钮-->
+                <Grid Margin="0 45 10 0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="50"/>
+                        <ColumnDefinition Width="1*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock></TextBlock>
+                    <Button Grid.Column="2" Command="{Binding LoginCommand}">登录</Button>
+                </Grid>
+                <Grid Margin="50 10 10 0">
+                    <TextBlock Text="{Binding ErrorMessage}" LineHeight="22" Foreground="Red" FontSize="14" HorizontalAlignment="Center" VerticalAlignment="Center" TextWrapping="Wrap" />
+                </Grid>
+            </StackPanel>
+        </Grid>
+    </Border>
+    <!--<Grid VerticalAlignment="Stretch" Margin="16">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
@@ -50,34 +157,34 @@
         <materialDesign:PackIcon Kind="Account" VerticalAlignment="Center"/>
         <TextBlock Grid.Column="1" Margin="8 0 0 0" VerticalAlignment="Center" >Name:</TextBlock>
         <TextBox Grid.Column="2" Margin="8 0 0 0" VerticalAlignment="Center" ></TextBox>
-      
         <materialDesign:PopupBox Grid.Column="3" Margin="8 0 0 0" Style="{StaticResource MaterialDesignMultiFloatingActionDarkPopupBox}">
             <StackPanel>
                 <Button>1</Button>
                 <Button>2</Button>
             </StackPanel>
         </materialDesign:PopupBox>
-        <!--<Button Grid.Column="3" Margin="8 0 0 0">Submit</Button>-->
+        -->
+    <!--<Button Grid.Column="3" Margin="8 0 0 0">Submit</Button>-->
+    <!--
         <materialDesign:DialogHost Grid.Column="5"  Identifier="RootDialog">
             <StackPanel VerticalAlignment="Center">
-                
             <Button Click="Button_Click">5</Button>
             <Button Command="{x:Static materialDesign:DialogHost.OpenDialogCommand}"
                                 Width="128" Margin="0 32 0 0">
                 <Button.CommandParameter>
-                    <!-- the simplest view model of all, a DateTime. the view can be found in the resources of MainWindow.xaml  -->
+                    -->
+    <!-- the simplest view model of all, a DateTime. the view can be found in the resources of MainWindow.xaml  -->
+    <!--
                     <system:DateTime>1966-JUL-30</system:DateTime>
                 </Button.CommandParameter>
                 PASS MODEL
             </Button>
             </StackPanel>
         </materialDesign:DialogHost>
-   
         <materialDesign:Card Grid.Row="1" Grid.ColumnSpan="4" materialDesign:ShadowAssist.ShadowDepth="Depth3" Margin="20">
             <StackPanel Orientation="Horizontal" Margin="16">
                 <materialDesign:PackIcon Kind="Twitter" Height="35" Width="35"/>
                 <TextBlock Margin="16 16 0 0" TextWrapping="Wrap" >Hey</TextBlock>
-
             </StackPanel>
         </materialDesign:Card>
         <materialDesign:ColorZone Grid.Row="2" Height="200" Mode="PrimaryLight" CornerRadius="20">
@@ -95,6 +202,5 @@
                 </materialDesign:ColorZone>
             </StackPanel>
         </materialDesign:ColorZone>
-    </Grid>
-    
+    </Grid>-->
 </Window>
